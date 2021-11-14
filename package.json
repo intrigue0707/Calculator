@@ -1,0 +1,52 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "coverage": "nyc npm run test",
+    "lint": "npm run lint",
+    "husky": {
+      "hooks": {
+        "pre-commit": "npm run coverage"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.epam.com/maryia_ivanova/calculator.git"
+  },
+  "keywords": [
+    "mocha",
+    "unit",
+    "testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "eslint": "^8.2.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "husky": "^7.0.4",
+    "mocha": "^9.1.3",
+    "mochawesome": "^7.0.1",
+    "nyc": "^15.1.0"
+  },
+  "dependencies": {
+    "run-func": "^1.0.5"
+  },
+  "nyc": {
+    "reporter": "html",
+    "check-coverage": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run coverage"
+    }
+  }
+}
