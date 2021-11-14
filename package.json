@@ -6,7 +6,12 @@
   "scripts": {
     "test": "mocha",
     "coverage": "nyc npm run test",
-    "lint": "npm run lint"
+    "lint": "npm run lint",
+    "husky": {
+      "hooks": {
+        "pre-commit": "npm run coverage"
+      }
+    }
   },
   "repository": {
     "type": "git",
